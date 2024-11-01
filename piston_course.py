@@ -1,20 +1,3 @@
-'''
-LICENSE AGREEMENT
-In relation to this Python file:
-1. Copyright of this Python file is owned by the author: Mark Misin
-2. This Python code can be freely used and distributed
-3. The copyright label in this Python file such as
-copyright=ax_main.text(x,y,'© Mark Misin Engineering',size=z)
-that indicate that the Copyright is owned by Mark Misin MUST NOT be removed.
-
-WARRANTY DISCLAIMER!
-This Python file comes with absolutely NO WARRANTY! 
-In no event can the author of this Python file be held responsible
-for whatever happens in relation to this Python file.
-For example, if there is a bug in the code and because of that a project,
-invention, or whatever it is used for fails - the author is NOT RESPONSIBLE!
-'''
-
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import matplotlib.animation as animation
@@ -56,13 +39,13 @@ connector_length=467 # [mm]
 frame_amount=len(t)
 
 def update_plot(num):
-    global pos,arrow_text
-    pos.remove()
-    arrow_text.remove()
+    #global pos,arrow_text
+    #pos.remove()
+    #arrow_text.remove()
     pos=ax.arrow(400,200,dx=x1[num],dy=y1[num],length_includes_head=True,head_width=10,head_length=20,color='g',linewidth=5)
-    pos.set_zorder(5)
+    #pos.set_zorder(5)
     arrow_text = ax.text(400+x1[num]+20,200+y1[num]+20,'arrow', fontsize=11)
-    arrow_text.set_zorder(5)
+    #arrow_text.set_zorder(5)
     point_A_side_1.set_data([[x1[num]-5,x1[num]+5],[y1[num],y1[num]]])
     point_A_side_2.set_data([[x2[num]-5,x2[num]+5],[y2[num],y2[num]]])
     point_A_side_3.set_data([[x3[num]-5,x3[num]+5],[y3[num],y3[num]]])
@@ -88,36 +71,34 @@ pos=ax.arrow(400,200,dx=x1[0],dy=y1[0],length_includes_head=True,head_width=10,h
 arrow_text = ax.text(400+x1[0]+20,200+y1[0]+20,'arrow', fontsize=11)
 
 point_A_side_1,=ax.plot([],[],'r',linewidth=10)
-point_A_side_1.set_zorder(5)
+#point_A_side_1.set_zorder(5)
 point_A_side_2,=ax.plot([],[],'w',linewidth=10)
-point_A_side_2.set_zorder(4)
+#point_A_side_2.set_zorder(4)
 point_A_side_3,=ax.plot([],[],'w',linewidth=10)
-point_A_side_3.set_zorder(4)
+#point_A_side_3.set_zorder(4)
 point_A_side_4,=ax.plot([],[],'w',linewidth=10)
-point_A_side_4.set_zorder(4)
+#point_A_side_4.set_zorder(4)
 point_A_side_5,=ax.plot([],[],'r',linewidth=10)
-point_A_side_5.set_zorder(5)
+#point_A_side_5.set_zorder(5)
 point_A_side_6,=ax.plot([-595,-605],[0,0],'k',linewidth=10)
-point_A_side_6.set_zorder(3)
+#point_A_side_6.set_zorder(3)
 bridge_sides_13,=ax.plot([],[],'k',linewidth=10,alpha=1)
-bridge_sides_13.set_zorder(3)
+#bridge_sides_13.set_zorder(3)
 bridge_sides_24,=ax.plot([],[],'k',linewidth=10,alpha=1)
-bridge_sides_24.set_zorder(3)
+#bridge_sides_24.set_zorder(3)
 bridge_sides_5,=ax.plot([],[],'k',linewidth=5)
-bridge_sides_5.set_zorder(3)
+#bridge_sides_5.set_zorder(3)
 connector_2,=ax.plot([],[],'k',linewidth=5)
-connector_2.set_zorder(4)
+#connector_2.set_zorder(4)
 connector,=ax.plot([],[],'k',linewidth=5)
-connector.set_zorder(4)
+#connector.set_zorder(4)
 point_B,=ax.plot([],[],'b',linewidth=50,alpha=0.5)
 pipe_up=ax.plot([400,700],[40,40],'k',linewidth=8)
 pipe_down=ax.plot([400,700],[-40,-40],'k',linewidth=8)
 wall_middle=ax.plot([700,700],[-40,40],'k',linewidth=8)
 plate_A,=ax.plot([0,0],[-10,10],'g',linewidth=250)
-plate_A.set_zorder(2)
+#plate_A.set_zorder(2)
 circle=ax.plot(x5[:],y5[:],'k',linewidth=10)
-
-copyright=ax.text(-780,350,'© Mark Misin Engineering',size=15)
 
 plt.xlim(-800,800)
 plt.ylim(-400,400)
