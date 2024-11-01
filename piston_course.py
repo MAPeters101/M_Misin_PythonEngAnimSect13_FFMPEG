@@ -40,11 +40,11 @@ frame_amount=len(t)
 
 def update_plot(num):
     #global pos,arrow_text
-    #pos.remove()
-    #arrow_text.remove()
     pos=ax.arrow(400,200,dx=x1[num],dy=y1[num],length_includes_head=True,head_width=10,head_length=20,color='g',linewidth=5)
-    #pos.set_zorder(5)
     arrow_text = ax.text(400+x1[num]+20,200+y1[num]+20,'arrow', fontsize=11)
+    pos.remove()
+    arrow_text.remove()
+    #pos.set_zorder(5)
     #arrow_text.set_zorder(5)
     point_A_side_1.set_data([[x1[num]-5,x1[num]+5],[y1[num],y1[num]]])
     point_A_side_2.set_data([[x2[num]-5,x2[num]+5],[y2[num],y2[num]]])
@@ -67,8 +67,8 @@ gs=gridspec.GridSpec(4,4)
 plt.subplots_adjust(left=0.03,bottom=0.035,right=0.99,top=0.97,wspace=0.15,hspace=0.2)
 ax=fig.add_subplot(gs[:,0:4],facecolor=(0.9,0.9,0.9))
 
-pos=ax.arrow(400,200,dx=x1[0],dy=y1[0],length_includes_head=True,head_width=10,head_length=10,color='g',linewidth=2)
-arrow_text = ax.text(400+x1[0]+20,200+y1[0]+20,'arrow', fontsize=11)
+#pos=ax.arrow(400,200,dx=x1[0],dy=y1[0],length_includes_head=True,head_width=10,head_length=10,color='g',linewidth=2)
+#arrow_text = ax.text(400+x1[0]+20,200+y1[0]+20,'arrow', fontsize=11)
 
 point_A_side_1,=ax.plot([],[],'r',linewidth=10)
 point_A_side_1.set_zorder(5)
