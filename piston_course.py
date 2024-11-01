@@ -79,7 +79,7 @@ def update_plot(num):
         point_A_side_4,point_A_side_5,connector,point_A_side_1,point_B,pos,arrow_text
 
 # Define figure properties
-fig=plt.figure(figsize=(16,9),dpi=120,facecolor=(0.8,0.8,0.8))
+fig=plt.figure(figsize=(16,9),dpi=80,facecolor=(0.8,0.8,0.8))
 gs=gridspec.GridSpec(4,4)
 plt.subplots_adjust(left=0.03,bottom=0.035,right=0.99,top=0.97,wspace=0.15,hspace=0.2)
 ax=fig.add_subplot(gs[:,0:4],facecolor=(0.9,0.9,0.9))
