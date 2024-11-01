@@ -128,12 +128,12 @@ plt.grid()
 
 engine_ani=animation.FuncAnimation(fig,update_plot,
     frames=frame_amount,interval=20,repeat=False,blit=True)
-plt.show()
+# plt.show()
 
 # # Matplotlib 3.3.3 needed or newer - comment out plt.show()
-# Writer=animation.writers['ffmpeg']
-# writer=Writer(fps=30,metadata={'artist': 'Me'},bitrate=1800)
-# engine_ani.save('engine_ani.mp4',writer)
+Writer=animation.writers['ffmpeg']
+writer=Writer(fps=30,metadata={'artist': 'Me'},bitrate=1800)
+engine_ani.save('engine_ani.mp4',writer)
 
 
 
